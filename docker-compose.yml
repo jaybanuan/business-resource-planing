@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  brp-api-server:
+    image: ${IMAGE_REPO_PREFIX}brp-api-server:1.0.0
+    ports:
+      - 8080:8080
+
+  brp-web-app:
+    image: ${IMAGE_REPO_PREFIX}brp-web-app:1.0.0
+    ports:
+      - 28080:8080
+
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password
+      ME_CONFIG_MONGODB_URL: mongodb://root:password@mongo:27017/

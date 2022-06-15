@@ -1,0 +1,15 @@
+{
+    "listeners": {
+        "*:8080": {
+            "pass": "applications/brp.api"
+        }
+    },
+    "applications": {
+        "brp.api": {
+            "type": "python",
+            "path": "/www/",
+            "module": "brp.api",
+            "callable": "app"
+        }
+    }
+}
