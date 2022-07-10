@@ -1,0 +1,12 @@
+collection: machine
+columns:
+  - title: Name
+    field: name
+
+  - title: End point
+    columns:
+      - title: Host
+        field: end-point.host
+
+      - title: Port
+        field: end-point.port

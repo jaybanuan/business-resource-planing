@@ -1,6 +1,6 @@
 FROM nginx/unit:1.27.0-python3.10
 
-# Copy NGINX Unit 
+# Copy NGINX Unit config file
 COPY config.json /docker-entrypoint.d/config.json
 
 # Install required packages

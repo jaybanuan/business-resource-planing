@@ -1,0 +1,17 @@
+---
+name: Web server
+end-point:
+  host: www.example.com
+  port: 80
+
+---
+name: DB server
+end-point:
+  host: db.example.com
+  port: 3306
+
+---
+name: API server
+end-point:
+  host: api.example.com
+  port: 80

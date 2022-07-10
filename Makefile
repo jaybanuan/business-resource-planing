@@ -25,7 +25,7 @@ pip:
 .PHONY: build
 build:
 	$(MAKE) -C brp-api-server build
-	$(MAKE) -C brp-web-app build
+#	$(MAKE) -C brp-web-app build
 
 
 .PHONY: up

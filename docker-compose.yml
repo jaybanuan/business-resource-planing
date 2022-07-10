@@ -4,6 +4,8 @@ services:
     image: ${IMAGE_REPO_PREFIX}brp-api-server:1.0.0
     ports:
       - 8080:8080
+    volumes:
+      - ./brp-api-server:/www
 
   brp-web-app:
     image: ${IMAGE_REPO_PREFIX}brp-web-app:1.0.0

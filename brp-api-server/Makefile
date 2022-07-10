@@ -18,7 +18,7 @@ clean:
 
 .PHONY: build
 build:
-	DOCKER_BUILDKIT=1 docker build \
+	docker build \
 		--tag $(IMAGE_REPO) \
 		--no-cache \
 		./

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://unpkg.com/tabulator-tables@5.2.7/dist/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.2.7/dist/js/tabulator.min.js"></script>
+  </head>
+  <body>
+    <div id="example-table"></div>
+    
+    <script type="text/javascript">
+    var tableData = [
+        {id:1, name:"Billy Bob", progress:"12", gender:"male", rating:1, col:"red", dob:"",},
+        {id:2, name:"Mary May", progress:"1", gender:"female", rating:2, col:"blue", dob:"14/05/1982"},
+    ]
+
+    var dataTable = new Tabulator("#example-table", {
+        data:tableData,
+        layout:"fitColumns",
+        columnHeaderVertAlign:"bottom", //align header contents to bottom of cell
+        columns:[
+          { title:"Name", field:"name", width:160 },
+          { // create column group
+            title:"Work Info",
+            columns:[
+              { title:"Progress", field:"progress", hozAlign:"right", sorter:"number", width:100 },
+              { title:"Rating", field:"rating", hozAlign:"center", width:80 },
+              { title:"Driver", field:"car", hozAlign:"center", width:80 },
+            ],
+          },
+          { // create column group
+            title:"Personal Info",
+            columns: [
+              { title:"Gender", field:"gender", width:90 },
+              { title:"Favourite Color", field:"col", width:140 },
+            ],
+          },
+          { title:"Date Of Birth", field:"dob", hozAlign:"center", sorter:"date", width:130 },
+        ],
+      })
+    </script>
+  </body>
+</html>
