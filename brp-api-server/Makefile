@@ -22,3 +22,7 @@ build:
 		--tag $(IMAGE_REPO) \
 		--no-cache \
 		./
+
+.PHONY: test
+test:
+	pytest tests

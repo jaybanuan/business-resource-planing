@@ -12,7 +12,7 @@ RUN apt update && apt install -y python3-pip                                  \
     && rm -rf /var/lib/apt/lists/* /etc/apt/sources.list.d/*.list
 
 # Copy python code
-COPY brp/ /www/brp/
+COPY src/ /www/
 
 # Copy data
 COPY database/ /database/

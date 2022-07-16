@@ -1,3 +1,6 @@
 {
-    "python.linting.mypyEnabled": true
+    "python.linting.mypyEnabled": true,
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/brp-api-server/src"
+    }
 }
